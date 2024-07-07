@@ -19,7 +19,7 @@ const UserOrganisations = sequelize.define('UserOrganisations', {
 });
 
 UserOrganisations.associate = (models) => {
-    UserOrganisations.belongsTo(models.User, { foreignKey: 'UserId' });
+    UserOrganisations.belongsTo(models.Users, { foreignKey: 'UserId' });
     UserOrganisations.belongsTo(models.Organisation, { foreignKey: 'OrganisationId' });
 };
 
